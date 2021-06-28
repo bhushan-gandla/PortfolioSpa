@@ -1,0 +1,15 @@
+$base-size: 16;
+
+$primary: #EAF9FA;
+$dark: #272243;
+$warning: #FFDD4E;
+
+
+$theme-colors: (
+  "primary": $primary,
+//   "secondary": $secondary,
+  "dark": $dark,
+//   "success": $success,
+//   "danger": $danger,
+  "warning": $warning
+);

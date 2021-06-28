@@ -1,0 +1,27 @@
+@import "../../global/functions";
+@import "../../global/variables";
+
+.main-navigation{
+    padding-top: pxToRem(80);
+}
+.btn-brand{
+    padding: 0px;
+    position: relative;
+    .overlay-text{
+        position: absolute;
+        z-index: 0;
+        color: $dark;
+        top:2px;
+        right:-2px;     
+    }
+}
+
+.fixed-scroll-element{
+    width: pxToRem(100);
+    height: pxToRem(100);
+    border-radius: 50%;
+    position: fixed;
+    top: 10%;
+    right: 60%;
+    background-color: red;
+}
