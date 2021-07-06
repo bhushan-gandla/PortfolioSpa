@@ -12,7 +12,7 @@
         z-index: 0;
         color: $dark;
         top:2px;
-        right:-2px;     
+        right:-2px;
     }
 }
 
@@ -23,5 +23,14 @@
     position: fixed;
     top: 10%;
     right: 60%;
-    background-color: red;
+    // background-color: red;
+}
+.fixed-scroll-element.bg-green{
+  background-color: green !important;
+}
+.fixed-scroll-element.bg-pink{
+  background-color: maroon !important;
+}
+.fixed-scroll-element.bg-dark-blue{
+  background-color: blue !important;
 }
