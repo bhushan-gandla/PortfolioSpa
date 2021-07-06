@@ -1,15 +1,75 @@
 $base-size: 16;
 
-$primary: #EAF9FA;
+$primary: #eaf9fa;
+$secondary: #dff7fd;
 $dark: #272243;
-$warning: #FFDD4E;
-
+$warning: #ffdd4e;
 
 $theme-colors: (
   "primary": $primary,
-//   "secondary": $secondary,
+  "secondary": $secondary,
   "dark": $dark,
-//   "success": $success,
-//   "danger": $danger,
-  "warning": $warning
+  //   "success": $success,
+  //   "danger": $danger,
+  "warning": $warning,
 );
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1280px,
+  xxl: 1368px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1240px,
+);
+
+// $spacers: (
+//   0: 0,
+//   1: (
+//     $spacer-6,
+//   ),
+//   2: (
+//     $spacer-9,
+//   ),
+//   3: (
+//     $spacer-12,
+//   ),
+//   4: (
+//     $spacer-15,
+//   ),
+//   5: (
+//     $spacer-18,
+//   ),
+//   6: (
+//     $spacer-24,
+//   ),
+//   7: (
+//     $spacer-30,
+//   ),
+//   8: (
+//     $spacer-36,
+//   ),
+// );
+
+// gutter width
+
+$grid-gutter-width: pxToRem(30);
+$gutters: (
+  0: 0,
+  1: $grid-gutter-width * 0.25,
+  2: $grid-gutter-width * 0.5,
+  3: $grid-gutter-width,
+  4: $grid-gutter-width * 1.5,
+  5: $grid-gutter-width * 3,
+);
+
+// nav
+$main-navigation-height: pxToRem(180);
