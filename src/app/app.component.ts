@@ -23,10 +23,10 @@ export class AppComponent {
     for (let i = 0; i <= sectionsCount.length; i++) {
       const sectionPosition = document.getElementById(`section-${i + 1}`)?.offsetTop;
       if (sectionHeight && windowScrollPosition <= sectionHeight) {
-        this.switchClassName(sectionsCount[i].className);
+        this.switchClassName(sectionsCount[0]?.className);
       }
       if (sectionPosition && windowScrollPosition > sectionPosition - 1) {
-        this.switchClassName(sectionsCount[i].className);
+        this.switchClassName(sectionsCount[i]?.className);
       }
     }
   }
