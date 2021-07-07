@@ -3,9 +3,8 @@ html {
 }
 
 .layout-wrapper{
-    padding: pxToRem(50);
+    padding: pxToRem(18);
     scroll-snap-align: start;
-    // background-color: $primary;
 }
 .main-content{
     height: calc(100% - 11.25rem);
@@ -26,31 +25,98 @@ html {
 }
 
 .fixed-scroll-bg{
-    width: 49vh;
-    height: 49vh;
-    margin-top: -25vh;
+    width: pxToRem(261);
+    height: pxToRem(261);
+    margin-right: pxToRem(-130);
+    top: 25%;
+    right: 50%;
+
+
     border-radius: 50%;
     position: fixed;
-    top: 50%;
-    right: 18%;
     background-color: $secondary;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 1s ease-out;
 }
-.image-wrapper{
-    height: 105%;
-}
 .image-producer{
-    width: pxToRem(435);
-    height: pxToRem(598);
-    margin-top: pxToRem(-288);
+    width: pxToRem(203);
+    height: pxToRem(279);
+
+
     position: absolute;
-    top: 48%;
-    background-image: url("../assets/pattern.svg");
     background-image: url("../assets/avatar.svg");
     background-repeat: no-repeat;
     background-size: 100%;
     transition: all 0.5s linear;
+}
+.pattern{
+    width: 28.4vw;
+    height: 17.13vw;
+    top: 25%;
+    left: -23vw;
+
+    
+    position: absolute;
+    background-image: url("../assets/pattern.svg");
+    background-repeat: no-repeat;
+}
+@include media-breakpoint-up(sm){
+    .fixed-scroll-bg{
+        width: 31vw;;
+        height: 31vw;;
+        margin-top: -15.5vw;
+        top: 50%;
+        right: 18%;
+    }
+    .image-producer{
+        width: 22.65vw;
+        height: 31.14vw;
+    }
+}
+@include media-breakpoint-up(md){
+    .fixed-scroll-bg{
+        width: 31vw;;
+        height: 31vw;;
+        margin-top: -15.5vw;
+        top: 50%;
+        right: 18%;
+    }
+    .image-producer{
+        width: 22.65vw;
+        height: 31.14vw;
+    }
+}
+@include media-breakpoint-up(xl){
+    .layout-wrapper{
+        padding: pxToRem(36);
+    }
+    .fixed-scroll-bg{
+        width: 31vw;;
+        height: 31vw;;
+        margin-top: -15.5vw;
+        top: 50%;
+        right: 18%;
+    }
+    .image-producer{
+        width: 22.65vw;
+        height: 31.14vw;
+    }
+    .pattern{
+        width: 28.4vw;
+        height: 17.13vw;
+        top: 25%;
+        left: -23vw;
+    
+        
+        position: absolute;
+        background-image: url("../assets/pattern.svg");
+        background-repeat: no-repeat;
+    }
+}
+@include media-breakpoint-up(xxl){
+    .layout-wrapper{
+        padding: pxToRem(50);
+    }
 }
