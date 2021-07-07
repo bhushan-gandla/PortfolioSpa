@@ -13,7 +13,7 @@
         z-index: 0;
         color: $dark;
         top:2px;
-        right:-2px;     
+        right:-2px;
     }
 }
 .top-puller{
@@ -24,4 +24,22 @@
 .introduction{
     padding-top: 19vh;
     margin-bottom: 2vh;
+}
+// .fixed-scroll-element{
+//     width: pxToRem(100);
+//     height: pxToRem(100);
+//     border-radius: 50%;
+//     position: fixed;
+//     top: 10%;
+//     right: 60%;
+//     // background-color: red;
+// }
+.fixed-scroll-element.bg-green{
+  background-color: green !important;
+}
+.fixed-scroll-element.bg-pink{
+  background-color: maroon !important;
+}
+.fixed-scroll-element.bg-dark-blue{
+  background-color: blue !important;
 }

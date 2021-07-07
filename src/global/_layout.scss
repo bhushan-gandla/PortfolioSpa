@@ -23,6 +23,10 @@ html {
 
     }
 }
+@keyframes example {
+    from {border-radius: 50%;}
+    to {border-radius: 0px;}
+  }
 
 .fixed-scroll-bg{
     width: pxToRem(261);
@@ -38,7 +42,17 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 1s ease-out;
+    // transition-delay: 0.5s;
+    transition: border-radius 1s linear;
+
+    
+
+    &.experience{
+        border-radius: 0px;
+        // .image-producer{
+        //     background-image: url("../assets/profile-pic.png");
+        // }
+    }
 }
 .image-producer{
     width: pxToRem(203);
@@ -49,7 +63,7 @@ html {
     background-image: url("../assets/avatar.svg");
     background-repeat: no-repeat;
     background-size: 100%;
-    transition: all 0.5s linear;
+    transition: background-image 0.5s ease-in;
 }
 .pattern{
     width: 28.4vw;
@@ -120,3 +134,18 @@ html {
         padding: pxToRem(50);
     }
 }
+
+
+// [data-aos^=zoom][data-aos^=zoom].aos-animate {
+//     opacity: 1;
+//     transform: translateZ(0) scale(1);
+// }
+
+// [aos="fade"] {
+//     opacity: 0;
+//     transition-property: opacity;
+//   }
+
+//   [aos="fade"].aos-animate {
+//     opacity: 1;
+//   }
