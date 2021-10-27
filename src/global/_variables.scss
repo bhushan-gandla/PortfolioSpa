@@ -5,6 +5,8 @@ $secondary: #c1eef9;
 $dark: #272243;
 $warning: #ffdd4e;
 
+$primary-light: #DFF7FD;
+
 $theme-colors: (
   "primary": $primary,
   "secondary": $secondary,
@@ -21,15 +23,16 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1280px,
   xxl: 1368px,
+  xxxl: 1536px
 );
 
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1240px,
-);
+// $container-max-widths: (
+//   sm: 540px,
+//   md: 720px,
+//   lg: 960px,
+//   xl: 1140px,
+//   xxl: 1368px
+// );
 
 // $spacers: (
 //   0: 0,
@@ -71,5 +74,5 @@ $gutters: (
   5: $grid-gutter-width * 3,
 );
 
-// nav
-$main-navigation-height: pxToRem(180);
+
+$carousel-indicator-opacity: 1;

@@ -10,6 +10,6 @@ $theme-colors: map-remove($theme-colors, "info", "light");
 
 @import "~bootstrap/scss/bootstrap.scss";
 
-
+@import "nav-bar";
 @import "typography";
 @import "layout";

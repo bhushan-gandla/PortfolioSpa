@@ -1,0 +1,33 @@
+@import "../../global/functions";
+@import "../../global/variables";
+
+.portfolio-modal{
+    .modal-dialog{
+        max-width: 100%;
+        margin:0px;
+        height: 100%;
+        .modal-content{
+            height: 100%;
+            border: none;
+            box-shadow: none;
+            border-radius: 0px;
+        }
+    }
+}
+.portfolio-carousel{
+    position: relative;
+    top: pxToRem(100);
+    height: calc(90% - 200px);
+    .carousel-item p{
+        font-size: pxToRem(18);
+    }
+    img{
+        width: 80%;
+    }
+    .carousel-indicators button{
+        background-color: $primary-light;
+        &.active{
+            background-color: $warning;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.header-spacer {
+  padding-top: pxToRem(15);
+}
+.btn-brand {
+  padding: 0px;
+  position: relative;
+  font-size: pxToRem(27);
+  .overlay-text {
+    position: absolute;
+    z-index: 0;
+    color: $dark;
+    top: 2px;
+    right: -2px;
+  }
+}
+@include media-breakpoint-up(sm) {
+  .header-spacer {
+    padding-top: pxToRem(27);
+  }
+}
+@include media-breakpoint-up(xl) {
+  .header-spacer {
+    padding-top: pxToRem(36);
+  }
+}
+@include media-breakpoint-up(xxl) {
+  .header-spacer {
+    padding-top: pxToRem(45);
+  }
+}
+@include media-breakpoint-up(xxxl) {
+  .header-spacer {
+    padding-top: pxToRem(80);
+  }
+}

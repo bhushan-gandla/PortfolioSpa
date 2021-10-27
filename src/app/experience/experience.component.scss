@@ -1,0 +1,55 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/variables";
+@import "../../global/functions";
+@import "../../global/variables";
+
+.experience-list {
+  list-style: none;
+  padding-left: pxToRem(15);
+  li {
+    display: flex;
+    background-image: linear-gradient(($dark) 33%, rgba(255, 255, 255, 0) 0%);
+    background-position: left;
+    background-size: 2px 11px;
+    background-repeat: repeat-y;
+    padding-bottom: pxToRem(12);
+    @include media-breakpoint-up(xxl){
+      padding-bottom: pxToRem(45);
+    }
+    &:last-child{
+        background-image: none;
+    }
+    h3 {
+      font-size: pxToRem(18);
+      @include media-breakpoint-up(xxl){
+        font-size: pxToRem(24);
+      }
+    }
+    p {
+      font-size: pxToRem(14);
+      @include media-breakpoint-up(xxl){
+        font-size: pxToRem(16);
+      }
+    }
+    .dot {
+      background-color: $warning;
+      width: pxToRem(21);
+      height: pxToRem(21);
+      border-radius: 50%;
+      margin-right: pxToRem(12);
+      flex-shrink: 0;
+      position: relative;
+      left: pxToRem(-10.5);
+
+      @include media-breakpoint-up(xxl){
+        width: pxToRem(30);
+        height: pxToRem(30);
+        margin-right: pxToRem(45);
+        left: pxToRem(-15);
+      }
+    }
+  }
+}
+
+

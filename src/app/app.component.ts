@@ -13,11 +13,11 @@ export class AppComponent {
   @HostListener('window:scroll') onScroll(e: Event): void {
     const windowScrollPosition = window.scrollY;
     const sectionsCount = [
+      { className: 'fixed-scroll-bg about-me' },
       { className: 'fixed-scroll-bg experience' },
-      { className: 'fixed-scroll-bg bg-warning' },
       { className: 'fixed-scroll-bg bg-green' },
-      { className: 'fixed-scroll-bg bg-pink' },
-      { className: 'fixed-scroll-bg bg-dark-blue' }
+      { className: 'fixed-scroll-bg skills' },
+      { className: 'fixed-scroll-bg portfolio' }
     ];
     const sectionHeight = document.getElementById(`section-1`)?.clientHeight;
     for (let i = 0; i <= sectionsCount.length; i++) {

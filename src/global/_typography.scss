@@ -1,17 +1,60 @@
-body{
-    font-family: 'Source Code Pro', monospace;
+body {
+  font-family: "Source Code Pro", monospace;
 }
-h1, h2, h3, h4, h5, h6{
-    font-family: 'DM Serif Display', serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "DM Serif Display", serif;
 }
-h1{
-    font-size: 85px;
+h1 {
+  font-size: pxToRem(45);
 }
-
-.font-code-36{
-    font-size: 36px;
+h2 {
+  font-size: pxToRem(24);
+  border-bottom: 5px solid $warning;
+  padding-bottom: 5px;
+  display: inline-block;
 }
-
-.font-code-27{
-    font-size: 27px;
+h3{
+  font-size: pxToRem(24);
+  border-bottom: 3px solid $warning;
+  padding-bottom: 3px;
+  display: inline-block;
 }
+.sub-introduction {
+  font-size: pxToRem(16);
+}
+p{
+  font-size: pxToRem(14);
+}
+@include media-breakpoint-up(lg){
+  p{
+    font-size: pxToRem(16);
+  }
+}
+@include media-breakpoint-up(xl) {
+  h1 {
+    font-size: pxToRem(63);
+  }
+  .sub-introduction {
+    font-size: pxToRem(24);
+  }
+  h2 {
+    font-size: pxToRem(36);
+  }
+  p{
+    font-size: pxToRem(24);
+  }
+}
+@include media-breakpoint-up(xxl) {
+    h1 {
+      font-size: pxToRem(85);
+    }
+    .sub-introduction {
+      font-size: pxToRem(27);
+    }
+  }
+  
