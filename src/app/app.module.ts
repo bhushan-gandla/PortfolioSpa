@@ -9,6 +9,10 @@ import { ExperienceComponent } from './experience/experience.component';
 import { SkillsComponent } from './skills/skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { GetInTouchComponent } from './get-in-touch/get-in-touch.component';
+import { PortfolioLandingPageComponent } from './portfolio-landing-page/portfolio-landing-page.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { FormsModule } from '@angular/forms';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +22,17 @@ import { GetInTouchComponent } from './get-in-touch/get-in-touch.component';
     ExperienceComponent,
     SkillsComponent,
     PortfolioComponent,
-    GetInTouchComponent
+    GetInTouchComponent,
+    PortfolioLandingPageComponent,
+    HomePageComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

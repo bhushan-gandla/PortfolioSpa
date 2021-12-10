@@ -4,6 +4,7 @@ $primary: #eaf9fa;
 $secondary: #c1eef9;
 $dark: #272243;
 $warning: #ffdd4e;
+$grey: #E4E4E4;
 
 $primary-light: #DFF7FD;
 
@@ -62,17 +63,3 @@ $grid-breakpoints: (
 //   ),
 // );
 
-// gutter width
-
-$grid-gutter-width: pxToRem(30);
-$gutters: (
-  0: 0,
-  1: $grid-gutter-width * 0.25,
-  2: $grid-gutter-width * 0.5,
-  3: $grid-gutter-width,
-  4: $grid-gutter-width * 1.5,
-  5: $grid-gutter-width * 3,
-);
-
-
-$carousel-indicator-opacity: 1;

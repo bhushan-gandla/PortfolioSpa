@@ -1,0 +1,40 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/variables";
+@import "../../global/functions";
+@import "../../global/variables";
+
+.elevator{
+    position: relative;
+    z-index: 3;
+}
+.nav-item{
+    // margin-bottom: pxToRem(36);
+    .btn{
+        display: flex;
+        align-items: center;
+        &::before{
+            content: "";
+            height: pxToRem(9);
+            width: pxToRem(9);
+            border-radius: 50%;
+            background-color: transparent;
+            margin-right: pxToRem(6);
+        }
+        &.active::before{
+            background-color: $warning;
+        }
+    }
+    &:last-child{
+        margin-bottom: 0px;
+    }
+    @include media-breakpoint-up(sm) {
+        margin-bottom: pxToRem(36);
+        .btn{
+            &::before{
+                height: pxToRem(15);
+                width: pxToRem(15);
+            }
+        }
+    }
+}

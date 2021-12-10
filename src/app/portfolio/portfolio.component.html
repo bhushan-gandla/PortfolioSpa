@@ -4,7 +4,7 @@
             <div class="container px-4">
                 <div class="row">
                     <div class="offset-sm-1 col-sm-11">
-                        <h2>Portfolio</h2>
+                        <h2 id="portfolioScroll">Portfolio</h2>
                     </div>
                 </div>
             </div>
@@ -17,7 +17,7 @@
                             <p>
                                 I have worked on a wide variety of products. These include B2B/B2C facing applications, hybrid apps, responsive-accessible apps and CMS driven apps.
                             </p>
-                            <button class="btn btn-outline-dark rounded-pill" data-bs-toggle="modal" data-bs-target="#portfolioDrawer">Show more</button>
+                            <a class="btn btn-outline-dark rounded-pill" (click)="showMore()">Show more works</a>
                         </div>
                     </div>
                     <div class="col-sm-6">
@@ -36,110 +36,54 @@
             <div class="modal-body p-0">
                 <div class="vh-100 layout-wrapper">
                     <div class="bg-primary h-100">
-                        <div class="main-content">
-                            <div class="header-spacer">
-                                <div class="container px-4">
-                                    <div class="row align-items-center">
-                                        <div class="col-6 col-sm-5 offset-sm-1">
-                                            <a class="btn btn-brand" href="#">
-                                                <div class="text-warning">
-                                                    <span><</span>
-                                                    <span>bg</span>
-                                                    <span>/></span>
-                                                </div>
-                                                <div class="overlay-text">
-                                                    <span><</span>
-                                                    <span>bg</span>
-                                                    <span>/></span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-5 text-end">
-                                            <button class="btn" data-bs-dismiss="modal" aria-label="Close">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                                                    <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
-                                                    <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
-                                                </svg>
-                                            </button>
-                                        </div>
+                        <div class="header-spacer">
+                            <div class="container px-4">
+                                <div class="row align-items-center">
+                                    <div class="col-6 col-sm-5 offset-sm-1">
+                                        <a class="btn btn-brand" href="#">
+                                            <div class="text-warning">
+                                                <span><</span>
+                                                <span>bg</span>
+                                                <span>/></span>
+                                            </div>
+                                            <div class="overlay-text">
+                                                <span><</span>
+                                                <span>bg</span>
+                                                <span>/></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-5 text-end">
+                                        <button class="btn" data-bs-dismiss="modal" aria-label="Close">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                                                <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                                            </svg>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
-
-                            <div id="carouselPortfolioIndicators" class="carousel slide portfolio-carousel" data-bs-ride="carousel">
-                                <div class="carousel-indicators">
-                                    <button type="button" data-bs-target="#carouselPortfolioIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="EXOS Design System"></button>
-                                    <button type="button" data-bs-target="#carouselPortfolioIndicators" data-bs-slide-to="1" aria-label="EXOS Servicing"></button>
-                                    <button type="button" data-bs-target="#carouselPortfolioIndicators" data-bs-slide-to="2" aria-label="EXOS Suite"></button>
-                                </div>
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <div class="container px-4 h-sm-100">
-                                            <div class="row gx-3 h-100">
-                                                <div class="offset-sm-1 col-sm-5">
-                                                    <h3 class="mb-4">EXOS Design System</h3>
-                                                    <div class="me-5">
-                                                        <p>
-                                                            Served the role of a Technical Product Manager for EXOS Design System. Developed web pages, assigned work and overlooked releases.
-                                                        </p>
-                                                        <p>
-                                                            Design System is a live documentation of designing and developing standards. Specs and code snippets are available in ready to use format. In addition, to the documentation it also offers private npm packages.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-5 d-flex align-items-center">
-                                                    <img src="assets/design-system@2x.png" class="d-block" alt="...">
-                                                </div>
-
+                        </div>
+                        <div class="align-items-center d-flex justify-content-center main-content">
+                            <div class="flex-grow-1 row">
+                                <div class="col-4 offset-4">
+                                    <p class="mb-5 pb-4 text-center">You would need password to proceed into this section.</p>
+                                    <form class="needs-validation" novalidate>
+                                        <div class="form-group mb-5">
+                                            <div class="form-password-wrapper position-relative">
+                                                <input type="password" aria-label="Password" (focus)="onFocus()" [ngClass]="{ 'is-invalid': isPasswordInValid}" [(ngModel)]="passwordCheck" id="password" name="portfolioPassword" class="form-control" required>
+                                                <label class="form-label" for="password" aria-hidden="true">Password</label>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="container px-4 h-sm-100">
-                                            <div class="row gx-3 h-100">
-                                                <div class="offset-sm-1 col-sm-5">
-
-                                                    <div class="me-5">
-                                                        <h3 class="mb-4">EXOS Servicing</h3>
-                                                        <p>
-                                                            Worked on developing web pages for a Loan Servicing Web application. This web app had to be completely responsive, accessible and private label ready
-                                                        </p>
-                                                        <p>
-                                                            SCSS was used to create private labelling framework.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-5 d-flex align-items-center">
-                                                    <img src="assets/servicing@2x.png" class="d-block" alt="...">
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="container px-4 h-sm-100">
-                                            <div class="row gx-3 h-100">
-                                                <div class="offset-sm-1 col-sm-5">
-
-                                                    <div class="me-5">
-                                                        <h3 class="mb-4">EXOS Suite</h3>
-                                                        <p>
-                                                            Designed and developed pixel perfect responsive B2B and B2C facing applications under the EXOS suite.
-                                                        </p>
-                                                        <p>
-                                                            B2B application include internal and external work flow management solutions. These applications include Appraiser App. This app is used by Appraisers to schedule and manage their orders.
-                                                        </p>
-                                                        <p>
-                                                            B2C application like the Consumer App is a hybrid application. Currently, live on Google and App Store. \ </p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-5 d-flex align-items-center">
-                                                    <img src="assets/exos-suite@2x.png" class="d-block" alt="...">
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
+                                            <div class="validation-message" *ngIf="isPasswordInValid">
+                                                Incorrect password
+                                              </div>
+                                          </div>
+                                          <div class="d-flex align-items-center">
+                                              <a href="mailto:bhushan.gandla@outlook.com" class="btn btn-outline-dark border-0 p-0 bg-transparent text-dark">Request Access</a>
+                                              <button class="btn btn-outline-dark rounded-pill ms-auto" type="button" (click)="onSubmit()">Submit</button>
+                                          </div>
+                                        <!-- <a class="btn btn-outline-dark rounded-pill" [routerLink]="'portfolio-landing-page'" target="_blank">navigate</a> -->
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -149,3 +93,22 @@
         </div>
     </div>
 </div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>

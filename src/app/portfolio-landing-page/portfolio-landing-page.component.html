@@ -1,0 +1,130 @@
+<div class="layout-wrapper">
+    <div class="bg-primary">
+        <app-nav-bar></app-nav-bar>
+        <section class="portfolio-landing-section"> 
+            <div class="container px-4 h-100">
+                <div class="row gx-3 h-100 position-relative">
+                    <div class="text-elements-portfolio-wrapper">
+                        <div class="inner-wrapper">
+                            <h1 class="main-text">
+                              "The only way to do great work is to love what you do"
+                            </h1>
+                             <p class="sub-main-text">
+                                 - Steve Jobs
+                             </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 offset-md-6 d-flex align-items-center justify-content-md-start justify-content-end position-relative">
+                        <div class="flex-shrink-0 d-flex align-items-center">
+                            
+                          <div class="fixed-scroll-bg landing-section rounded-0 position-relative flex-shrink-0">
+                          </div>
+                          <div class="pattern flex-shrink-0 m-0"></div>
+                      </div>
+                  </div>
+                  
+                </div>
+              </div>
+        </section>  
+        <section>
+            <fieldset class="d-flex align-items-center justify-content-center flex-wrap">
+                <div class="form-check portfolio-tabs ps-0">
+                    <input class="form-check-input invisible w-0 h-0 m-0" (click)="showHideTabs(0)" id="all" [value]="0" [(ngModel)]="sh" name="sh" type="radio" [checked]="isChecked" >
+                    <label class="form-check-label" for="all">
+                        <p class="h3 mb-0">All</p>
+                    </label>
+                </div>
+                <div class="form-check portfolio-tabs ps-0">
+                    <input class="form-check-input invisible w-0 h-0 m-0" (click)="showHideTabs(1)" id="uiDevelopment" [value]="1" [(ngModel)]="sh" name="sh" type="radio" [checked]="!isChecked">
+                    <label class="form-check-label" for="uiDevelopment">
+                        <p class="h3 mb-0">UI Development</p>
+                    </label>
+                </div>
+                <div class="form-check portfolio-tabs ps-0">
+                    <input class="form-check-input invisible w-0 h-0 m-0" (click)="showHideTabs(2)" id="uiDesign" [value]="2" [(ngModel)]="sh" name="sh" type="radio" [checked]="!isChecked">
+                    <label class="form-check-label" for="uiDesign">
+                        <p class="h3 mb-0">UI Design</p>
+                    </label>
+                </div>
+                <div class="form-check portfolio-tabs ps-0">
+                    <input class="form-check-input invisible w-0 h-0 m-0" (click)="showHideTabs(3)" id="graphicDesign" [value]="3" [(ngModel)]="sh" name="sh" type="radio" [checked]="!isChecked" >
+                    <label class="form-check-label" for="graphicDesign">
+                        <p class="h3 mb-0">Gaphic Design</p>
+                    </label>
+                </div>
+                <div class="form-check portfolio-tabs ps-0">
+                    <input class="form-check-input invisible w-0 h-0 m-0" (click)="showHideTabs(4)" id="videos" [value]="4" [(ngModel)]="sh" name="sh" type="radio" [checked]="!isChecked" >
+                    <label class="form-check-label" for="videos">
+                        <p class="h3 mb-0">Videos</p>
+                    </label>
+                </div>
+            </fieldset>
+              <div class="portfolio-items-outer-wrapper">
+                <div class="portfolio-items" *ngFor='let portfolioItem of filteredPortfolioItems;'>
+                    <ng-container *ngIf="!portfolioItem.showHide">
+                        <button class="btn btn-portfolio-item" [class]="portfolioItem.id" data-bs-toggle="modal" [attr.data-bs-target]="'#' + portfolioItem.id">
+                            <img [src]="portfolioItem.imageSrc" [alt]="portfolioItem.name">
+                            <div class="on-hover-text">
+                                <div class="h3 border-0 m-0 h-100 w-100 d-flex align-items-center justify-content-center">{{portfolioItem.name}}</div>
+                            </div>
+                        </button>
+                    </ng-container>
+                    <ng-container *ngIf="portfolioItem.showHide">
+                        <a class="btn btn-portfolio-item" [href]="portfolioItem.url" target="_blank">
+                            <img [src]="portfolioItem.imageSrc" [alt]="portfolioItem.name">
+                            <div class="on-hover-text">
+                                <div class="h3 border-0 m-0 h-100 w-100 d-flex align-items-center justify-content-center">{{portfolioItem.name}}</div>
+                            </div>
+                        </a>
+                    </ng-container>
+                </div>
+              </div>
+        </section>
+    </div>
+</div>
+
+<ng-container *ngFor='let portfolioItem of portfolioItems;let i = index'>
+    <ng-container *ngIf="!portfolioItem.showHide">
+        <div class="modal fade portfolio-modal" [id]="portfolioItem.id" [class]="portfolioItem.id" tabindex="-1" [attr.aria-labelledby]="portfolioItem.id + '-label'" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <h5 class="modal-title visually-hidden" id="portfolioDrawerLabel">{{portfolioItem.name}}</h5>
+                <div class="modal-body p-0">
+                    <div class="h-100 layout-wrapper">
+                        <div class="bg-primary h-100">
+                            <div class="main-content">
+                                <div class="container-lg px-4 h-100 portfolio-modal-items">
+                                    <div class="row gx-3 h-100">
+                                        <div class=" offset-lg-1 col-lg-5 d-flex flex-column justify-content-lg-between order-2 order-lg-1">
+                                            <h3 class="header-spacer mb-4 align-self-start">{{portfolioItem.name}}</h3>
+                                            <div class="me-lg-5" [innerHTML]="portfolioItem.content">
+                                            </div>
+                                            <div></div>
+                                        </div>
+                                        <div class="col-lg-5 d-flex flex-column align-items-end justify-content-lg-between order-1 order-lg-2">
+                                            <div class="header-spacer">
+                                                <button class="btn" data-bs-dismiss="modal" aria-label="Close">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                                                        <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <img [src]="portfolioItem.imageSrc" class="d-block align-items-self image-portfolio align-self-center"  [alt]="portfolioItem.name">
+                                            <!-- <iframe width="100%" height="400" [src]="santizer()"></iframe> -->
+                                            <!-- <div [innerHTML]="portfolioItem.code">
+                                            </div> -->
+                                            <div></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </ng-container>
+</ng-container>

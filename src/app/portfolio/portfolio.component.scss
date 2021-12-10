@@ -1,3 +1,6 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/variables";
 @import "../../global/functions";
 @import "../../global/variables";
 
@@ -29,5 +32,44 @@
         &.active{
             background-color: $warning;
         }
+    }
+}
+.form-password-wrapper{
+    height: pxToRem(81);
+    .form-label{
+        position: absolute;
+        font-family: "DM Serif Display", serif;
+        text-transform: uppercase;
+        font-size: pxToRem(18);
+        top: 18px;
+        left: 24px;
+        margin-bottom: 0px;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .form-control{
+        background-color: transparent;
+        border: none;
+        border-bottom: 3px solid $warning;
+        height: pxToRem(63);
+        font-size: pxToRem(36);
+        border-radius: 0px;
+        transition: border 0.3s ease-in-out;
+        padding: 0px;
+        &.is-invalid{
+            color: $danger;
+            border-color: $danger !important;
+        }
+        &.fc-touched {
+            border-color: $dark;
+            + .form-label{
+                top: -31px;
+                left: 0px;
+            }
+        }
+    }
+    .validation-message{
+        color: $danger;
+        font-size: pxToRem(12);
     }
 }

@@ -1,6 +1,64 @@
 <div class="vh-100 layout-wrapper">
     <div class="bg-primary h-100">
-        skills
+        <nav class="header-spacer">
+            <div class="container px-4">
+                <div class="row">
+                    <div class="offset-sm-1 col-sm-11">
+                        <h2 id="skillsScroll">Skills</h2>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="main-content">
+            <div class="container px-4 h-sm-100">
+                <div class="row gx-3 h-100 text-wrapper elevator">
+                    <div class="offset-sm-1 col-sm-4 pb-5 pb-sm-0 d-flex align-items-center">
+                        <ul class="nav flex-sm-column" id="skillsTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                              <button class="btn active" id="frontEnd-tab" data-bs-toggle="tab" data-bs-target="#frontEnd" type="button" role="tab" aria-controls="frontEnd" aria-selected="true">
+                                  <p class="mb-0">Front end</p>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="btn" id="uiDesign-tab" data-bs-toggle="tab" data-bs-target="#uiDesign" type="button" role="tab" aria-controls="uiDesign" aria-selected="false">
+                                <p class="mb-0">UI Design</p>
+                               </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="btn" id="accessibility-tab" data-bs-toggle="tab" data-bs-target="#accessibility" type="button" role="tab" aria-controls="accessibility" aria-selected="false">
+                                <p class="mb-0">Accessibility</p>
+                              </button>
+                            </li>
+                          </ul>
+                    </div>
+                    <div class="col-sm-5 d-flex align-items-center">
+                        <div class="tab-content" id="skillsTabContent">
+                            <div class="tab-pane fade show active" id="frontEnd" role="tabpanel" aria-labelledby="frontEnd-tab">
+                                <p>
+                                    I use HTML5, SCSS, JavaScript and Angular to build awesome web experiences. While coding web templates, I use mobile first approach and test the code to ensure seamless experience. 
+                                </p>
+                                <p>
+                                    I love Bootstrap; as it allows to quickly create responsive layouts. 
+                                </p>
+                            </div>
+                            <div class="tab-pane fade" id="uiDesign" role="tabpanel" aria-labelledby="uiDesign-tab">
+                                <p>
+                                    I strongly believe in creating user friendly experiences. I am proficient with responsive web design and I use XD, Illustrator, Photoshop and Zeplin.
+                                </p>
+                                <p>
+                                    I keep myself up-to-date with latest design patterns as well. 
+                                </p>
+                            </div>
+                            <div class="tab-pane fade" id="accessibility" role="tabpanel" aria-labelledby="accessibility-tab">
+                                <p>
+                                    We are all different, but we are all human, and therefore have the same human rights. Hence accessibility is an important aspect to consider while building web apps. I have solid understanding of WCAG 2.1, ADA and Section 508 guidelines. 
+                                </p>
+                            </div>
+                          </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
     </div>
 </div>
-

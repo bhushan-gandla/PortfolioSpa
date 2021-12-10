@@ -1,0 +1,14 @@
+// gutter width
+
+$grid-gutter-width: pxToRem(30);
+$gutters: (
+  0: 0,
+  1: $grid-gutter-width * 0.25,
+  2: $grid-gutter-width * 0.5,
+  3: $grid-gutter-width,
+  4: $grid-gutter-width * 1.5,
+  5: $grid-gutter-width * 3,
+);
+
+
+$carousel-indicator-opacity: 1;

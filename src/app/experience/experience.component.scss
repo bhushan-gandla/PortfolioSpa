@@ -13,7 +13,7 @@
     background-position: left;
     background-size: 2px 11px;
     background-repeat: repeat-y;
-    padding-bottom: pxToRem(12);
+    // padding-bottom: pxToRem(12);
     @include media-breakpoint-up(xxl){
       padding-bottom: pxToRem(45);
     }

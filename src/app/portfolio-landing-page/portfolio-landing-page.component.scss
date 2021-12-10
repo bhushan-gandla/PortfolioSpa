@@ -1,0 +1,231 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/variables";
+@import "../../global/variables";
+@import "../../global/functions";
+
+.portfolio-landing-section {
+  height: calc(100vh - 250px);
+}
+@include media-breakpoint-down(sm) {
+  .fixed-scroll-bg {
+    width: pxToRem(230);
+    height: pxToRem(230);
+    top: auto !important;
+    left: auto !important;
+    margin-left: 0px;
+  }
+}
+.layout-wrapper {
+  scroll-snap-align: none;
+  position: static;
+}
+.pattern {
+  position: absolute;
+  left: 10%;
+  top: auto;
+  @include media-breakpoint-up(md) {
+    left: -50%;
+  }
+}
+.header-spacer {
+  .btn {
+    position: relative;
+    z-index: 1;
+  }
+}
+.text-elements-portfolio-wrapper {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+  z-index: 3;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "DM Serif Display", serif;
+  .main-text {
+    font-size: pxToRem(36);
+  }
+  .sub-main-text {
+    font-size: pxToRem(27);
+  }
+  @include media-breakpoint-up(md) {
+    .inner-wrapper {
+      width: 600px;
+      display: inline-block;
+    }
+    .main-text {
+      font-size: pxToRem(72);
+    }
+    .sub-main-text {
+      font-size: pxToRem(45);
+    }
+  }
+}
+.portfolio-tabs {
+  .form-check-label {
+    cursor: pointer;
+    @include media-breakpoint-up(lg) {
+      margin-left: pxToRem(9);
+    }
+    .h3 {
+      border-color: transparent;
+      @include media-breakpoint-down(md) {
+        font-size: pxToRem(18);
+      }
+    }
+  } 
+  .form-check-input:checked + .form-check-label .h3 {
+    border-color: $warning;
+  }
+}
+.portfolio-items-outer-wrapper {
+  // border: 0.5px solid $grey;
+  // margin: -1px;
+  // overflow: hidden;
+
+  display: inline-grid;
+  // grid-template-columns: 100% 100% 100%;
+  grid-template-columns: repeat(auto-fill, 100%);
+  border-top: 1px solid #fff;
+  grid-gap: 1px;
+  background-color: #fff;
+  @include media-breakpoint-up(md) {
+    grid-template-columns: 33.33% 33.33% 33.33%;
+  }
+  .portfolio-items {
+    background-color: $primary;
+  }
+}
+.btn-portfolio-item {
+  padding: pxToRem(27);
+  background-color: $primary;
+  text-align: center;
+  border-radius: 0px;
+  height: 270px;
+  height: 100%;
+  transition: all 0.1s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  &.exos-ard {
+    img {
+      width: 160%;
+      margin-top: -70px;
+      margin-left: -30px;
+    }
+  }
+  &.exos-appraiser-app {
+    img {
+      width: 150%;
+      margin-top: -65px;
+      margin-left: -60px;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    height: 400px;
+  }
+  .on-hover-text {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    // background-color: rgba(128, 128, 128, 0.247);;
+  }
+  &:hover {
+    // border: 1px solid $grey;
+    transform: scale(105%);
+    -webkit-box-shadow: 0 0 10px rgb(124 124 124 / 15%);
+    box-shadow: 0 0 10px rgb(124 124 124 / 15%);
+    z-index: 1;
+    color: black;
+    .on-hover-text {
+      display: block;
+    }
+    img {
+      filter: blur(4px);
+      -webkit-filter: blur(4px);
+      opacity: 0.6;
+    }
+  }
+  img {
+    display: inline-block;
+    width: 80%;
+  }
+}
+
+.portfolio-modal {
+  .modal-dialog {
+    max-width: 100%;
+    margin: 0px;
+    height: 100%;
+    .modal-content {
+      height: 100%;
+      border: none;
+      box-shadow: none;
+      border-radius: 0px;
+    }
+  }
+  .appraiser-app {
+    width: 230%;
+    margin-top: -41%;
+    margin-right: -67%;
+  }
+  .main-content{
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+.portfolio-modal-items {
+  p {
+    font-size: pxToRem(18);
+  }
+  img {
+    width: 80%;
+  }
+}
+
+.exos-ard {
+  .image-portfolio {
+    position: relative;
+    left: 20%;
+    bottom: 8%;
+    width: 127%;
+    @include media-breakpoint-up(md) {
+      position: relative;
+      left: 29%;
+      bottom: 8%;
+      width: 125%;
+    }
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      left: 39%;
+      width: 90%;
+      bottom: -2%;
+    }
+  }
+}
+.exos-appraiser-app {
+  .image-portfolio {
+    position: relative;
+    left: 20%;
+    bottom: 8%;
+    width: 127%;
+    @include media-breakpoint-up(md) {
+      position: relative;
+      left: 29%;
+      bottom: 8%;
+      width: 125%;
+    }
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      left: 29%;
+      width: 90%;
+      bottom: -2%;
+    }
+  }
+}

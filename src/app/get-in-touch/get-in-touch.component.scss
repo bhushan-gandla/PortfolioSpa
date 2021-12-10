@@ -1,0 +1,17 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/variables";
+
+.btn-brand {
+    @include media-breakpoint-down(sm) {
+        position: absolute;
+        bottom: 0px;
+    }
+    .overlay-text {
+        left: 2px;
+    }
+}
+.elevator {
+    position: relative;
+    z-index: 3;
+}
