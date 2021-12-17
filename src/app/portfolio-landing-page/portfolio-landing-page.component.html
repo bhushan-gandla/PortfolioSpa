@@ -70,7 +70,7 @@
                         </button>
                     </ng-container>
                     <ng-container *ngIf="portfolioItem.showHide">
-                        <a class="btn btn-portfolio-item" [href]="portfolioItem.url" target="_blank">
+                        <a class="btn btn-portfolio-item" [class]="portfolioItem.id" [href]="portfolioItem.url" target="_blank">
                             <img [src]="portfolioItem.imageSrc" [alt]="portfolioItem.name">
                             <div class="on-hover-text">
                                 <div class="h3 border-0 m-0 h-100 w-100 d-flex align-items-center justify-content-center">{{portfolioItem.name}}</div>
@@ -83,7 +83,7 @@
     </div>
 </div>
 
-<ng-container *ngFor='let portfolioItem of portfolioItems;let i = index'>
+<ng-container *ngFor='let portfolioItem of portfolioItems'>
     <ng-container *ngIf="!portfolioItem.showHide">
         <div class="modal fade portfolio-modal" [id]="portfolioItem.id" [class]="portfolioItem.id" tabindex="-1" [attr.aria-labelledby]="portfolioItem.id + '-label'" aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable">
@@ -114,7 +114,16 @@
                                             <!-- <iframe width="100%" height="400" [src]="santizer()"></iframe> -->
                                             <!-- <div [innerHTML]="portfolioItem.code">
                                             </div> -->
-                                            <div></div>
+                                            <ul class="list-unstyled d-flex flex-wrap" >
+                                                <!-- <li class="tool-item adobe-xd">
+                                                    <span class="icon"></span>
+                                                    <span class="tool-name">Adobe XD</span>
+                                                </li> -->
+                                                <li *ngFor='let tool of portfolioItem.toolsUsed'>
+                                                    {{tool.toolName}}
+                                                    {{tool.toolClass}}
+                                                </li>
+                                            </ul>
                                         </div>
 
                                     </div>

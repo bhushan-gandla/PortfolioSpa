@@ -176,3 +176,9 @@ html {
     // left: pxToRem(-450);
   }
 }
+
+@include media-breakpoint-up(lg){
+  .btn:not(.btn-brand){
+    padding: pxToRem(8) pxToRem(18);
+  }
+}
