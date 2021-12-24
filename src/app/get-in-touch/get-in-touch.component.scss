@@ -1,17 +1,45 @@
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/variables";
+@import "../../global/variables";
+@import "../../global/functions";
 
 .btn-brand {
-    @include media-breakpoint-down(sm) {
-        position: absolute;
-        bottom: 0px;
-    }
-    .overlay-text {
-        left: 2px;
-    }
+  @include media-breakpoint-down(sm) {
+    position: absolute;
+    bottom: 0px;
+  }
+  .overlay-text {
+    left: 2px;
+  }
 }
 .elevator {
-    position: relative;
-    z-index: 3;
+  position: relative;
+  z-index: 3;
+}
+.contact-methods {
+  .btn {
+    padding: 0px;
+    p {
+      margin-bottom: 0px;
+    }
+  }
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: pxToRem(15);
+    span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $warning;
+      height: pxToRem(30);
+      width: pxToRem(30);
+      border-radius: 50%;
+      margin-right: pxToRem(9);
+      .currentColor {
+        fill: $grey;
+      }
+    }
+  }
 }

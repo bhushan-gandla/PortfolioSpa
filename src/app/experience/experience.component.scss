@@ -15,7 +15,7 @@
     background-repeat: repeat-y;
     // padding-bottom: pxToRem(12);
     @include media-breakpoint-up(xxl){
-      padding-bottom: pxToRem(45);
+      padding-bottom: pxToRem(9);
     }
     &:last-child{
         background-image: none;
