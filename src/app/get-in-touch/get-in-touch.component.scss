@@ -32,13 +32,13 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background-color: $warning;
-      height: pxToRem(30);
-      width: pxToRem(30);
+      background-color: $secondary;
+      height: pxToRem(45);
+      width: pxToRem(45);
       border-radius: 50%;
-      margin-right: pxToRem(9);
+      margin-right: pxToRem(12);
       .currentColor {
-        fill: $grey;
+        fill: $dark;
       }
     }
   }

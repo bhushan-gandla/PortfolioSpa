@@ -5,9 +5,9 @@ import { HomePageComponent } from './home-page/home-page.component';
 
 
 const routes: Routes = [
-  { path: 'portfolio-landing-page', component: PortfolioLandingPageComponent, data: { title: 'Portfolio Landing Page' } },
+  { path: 'portfolio-landing-page', component: PortfolioLandingPageComponent, data: { title: 'Bhushan Gandla - Portfolio' } },
   { path: 'passwordTrue', component: HomePageComponent, data: { title: 'Bhushan Gandla' } },
-  { path: '', component: HomePageComponent}
+  { path: '', component: HomePageComponent, data: { title: 'Bhushan Gandla' }}
 ];
 
 @NgModule({

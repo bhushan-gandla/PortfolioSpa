@@ -1,5 +1,8 @@
 html {
-  scroll-snap-type: y mandatory;
+    scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+  -webkit-backface-visibility: hidden;
+  
 }
 
 .layout-wrapper {

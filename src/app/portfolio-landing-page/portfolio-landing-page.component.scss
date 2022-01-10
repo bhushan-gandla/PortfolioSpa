@@ -181,6 +181,9 @@
       border-radius: 0px;
     }
   }
+  .modal-body{
+    overflow-x: hidden;
+  }
   .appraiser-app {
     width: 230%;
     margin-top: -41%;
@@ -204,57 +207,149 @@
 .exos-ard {
   .image-portfolio {
     position: relative;
-    left: 20%;
+    left: 0%;
     bottom: 8%;
     width: 127%;
     @include media-breakpoint-up(md) {
       position: relative;
-      left: 29%;
+      left: 100px;
       bottom: 8%;
-      width: 125%;
+      width: 85%;
     }
     @include media-breakpoint-up(lg) {
       position: absolute;
-      left: 39%;
-      width: 90%;
-      bottom: -2%;
+      left: -60px;
+      width: 280%;
+      bottom: 2px;
+      top: -265px;
     }
   }
 }
 .exos-appraiser-app {
   .image-portfolio {
     position: relative;
-    left: 20%;
+    left: 0%;
     bottom: 8%;
     width: 127%;
     @include media-breakpoint-up(md) {
       position: relative;
-      left: 29%;
+      left: 120px;
       bottom: 8%;
-      width: 125%;
+      width: 85%;
     }
     @include media-breakpoint-up(lg) {
       position: absolute;
-      left: 29%;
-      width: 90%;
-      bottom: -2%;
+      left: -150px;
+      width: 220%;
+      bottom: 2px;
+      top: -225px;
     }
   }
 }
 .tool-item{
   background-color: $secondary;
-  height: pxToRem(20);
-  border-radius: pxToRem(10);
+  height: pxToRem(24);
+  border-radius: pxToRem(12);
   display: inline-flex;
   align-items: center;
+  margin: 0px pxToRem(10) pxToRem(10) 0px;
   .icon{
-    background-color: #ccc;
-    height: pxToRem(20);
-    width: pxToRem(20);
+    background-color: #92e3f7 !important;
+    height: pxToRem(24);
+    width: pxToRem(24);
     border-radius: 50%;
+    background-size: pxToRem(19);
+    background-repeat: no-repeat;
+    background-position: center;
   }
   .tool-name{
-    padding: pxToRem(2) pxToRem(6);
-    font-size: pxToRem(12);
+    padding: pxToRem(2) pxToRem(8) pxToRem(2) pxToRem(5);
+    font-size: pxToRem(13);
   }
+  &.adobe-xd .icon{ 
+    background-image: url("../../assets/adobeXd.svg");
+    background-color: #470137;
+    background-size: pxToRem(14);
+  }
+  &.adobe-illustrator .icon{
+    background-image: url("../../assets/adobeIllustrator.svg");
+    background-color: #470137;
+    background-size: pxToRem(14);
+  }
+  &.adobe-photoshop .icon{
+    background-image: url("../../assets/adobePhotoshop.svg");
+    background-color: #470137;
+    background-size: pxToRem(14);
+  }
+  &.zeplin .icon{ 
+    background-image: url("../../assets/zeplin.svg");
+    background-color: #092325;
+  }
+  &.html .icon{ 
+    background-image: url("../../assets/html5.svg");
+    background-color: #092325;
+    background-size: pxToRem(15);
+  }
+  &.scss .icon{ 
+    background-image: url("../../assets/sass.svg");
+    background-color: #012325;
+    background-size: pxToRem(16);
+  }
+  &.bootstrap-4 .icon{ 
+    background-image: url("../../assets/bootstrap.svg");
+    background-color: #563d7c;
+    // background-size: pxToRem(13);
+  }
+  &.javascript .icon{ 
+    background-image: url("../../assets/javaScript.svg");
+    background-color: #f7df1e;
+    background-position: 0px -1px;
+  }
+  &.angular .icon{ 
+    background-image: url("../../assets/angular.svg");
+    background-color: #900625;
+  }
+  &.css .icon{ 
+    background-image: url("../../assets/css.svg");
+    background-color: #900625;
+    background-size: pxToRem(13);
+  }
+  &.no-icon {
+    padding-left: pxToRem(8);
+    .icon{ 
+      display: none;
+    }
+  }
+}
+.modal-top-wrapper{
+  padding-top: pxToRem(24);
+  margin-bottom: pxToRem(18);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: $primary;
+  @include media-breakpoint-up(lg) {
+    padding-top: pxToRem(66);
+    margin-bottom: pxToRem(63);
+  }
+}
+.left-content-wrapper{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 150px;
+}
+h4{
+  font-size: pxToRem(18);
+}
+.btn-close-elevator{
+  position: relative;
+  z-index: 1;
+}
+.btn-back{
+  padding: 0px;
+  height: 45px;
+  width: 45px;
+  margin-right: 18px;
+  background-color: $secondary;
+  border-radius: 50%;
 }

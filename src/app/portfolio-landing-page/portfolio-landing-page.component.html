@@ -89,41 +89,65 @@
             <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
                 <h5 class="modal-title visually-hidden" id="portfolioDrawerLabel">{{portfolioItem.name}}</h5>
-                <div class="modal-body p-0">
-                    <div class="h-100 layout-wrapper">
-                        <div class="bg-primary h-100">
-                            <div class="main-content">
-                                <div class="container-lg px-4 h-100 portfolio-modal-items">
-                                    <div class="row gx-3 h-100">
-                                        <div class=" offset-lg-1 col-lg-5 d-flex flex-column justify-content-lg-between order-2 order-lg-1">
-                                            <h3 class="header-spacer mb-4 align-self-start">{{portfolioItem.name}}</h3>
-                                            <div class="me-lg-5" [innerHTML]="portfolioItem.content">
-                                            </div>
-                                            <div></div>
-                                        </div>
-                                        <div class="col-lg-5 d-flex flex-column align-items-end justify-content-lg-between order-1 order-lg-2">
-                                            <div class="header-spacer">
-                                                <button class="btn" data-bs-dismiss="modal" aria-label="Close">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                                                        <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
-                                                        <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                            <img [src]="portfolioItem.imageSrc" class="d-block align-items-self image-portfolio align-self-center"  [alt]="portfolioItem.name">
-                                            <div></div>
-                                            <!-- <iframe width="100%" height="400" [src]="santizer()"></iframe> -->
-                                            <!-- <div [innerHTML]="portfolioItem.code">
-                                            </div> -->
-                                            <!-- <ul class="list-unstyled d-flex flex-wrap" >
-                                                <li *ngFor='let tool of portfolioItem.toolsUsed'>
+                <div class="modal-body bg-primary p-0">
+                    <div class="container-lg px-4 portfolio-modal-items">
+                        <div class="row gx-3">
+                            <div class="col-12 col-md-11 modal-top-wrapper d-flex align-items-center">
+                                <button class="btn btn-back" data-bs-dismiss="modal" aria-label="Close">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+                                      </svg>
+                                </button>
+                                <h3 class="mb-0 mt-1 align-self-start">{{portfolioItem.name}}</h3>
+                                <!-- <div class="ms-auto">
+                                    <button class="btn btn-close-elevator" data-bs-dismiss="modal" aria-label="Close">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                                            <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                                        </svg>
+                                    </button>
+                                </div> -->
+                            </div>
+                            <div class="col-lg-6 d-lg-none">
+                                <img [src]="portfolioItem.imageSrc" class="d-block my-3 mx-auto image-portfolio"  [alt]="portfolioItem.name">
+                            </div>
+                            <div class="col-lg-6 order-1">
+                                <div class="me-lg-5" [innerHTML]="portfolioItem.content">
+                                </div>
+                                <ng-container *ngIf="portfolioItem.explosiveDesign">
+                                    <h4 class="mt-5">Tools Used</h4>
+                                    <ul class="list-unstyled d-flex flex-wrap">
+                                        <ng-container *ngFor='let tool of portfolioItem.toolsUsed'>
+                                            <li class="tool-item" [class]="tool.toolClass">
+                                                <div class="icon"></div>
+                                                <div class="tool-name"> 
                                                     {{tool.toolName}}
-                                                    {{tool.toolClass}}
+                                                </div>
+                                            </li>
+                                        </ng-container>
+                                    </ul>
+                                    <h4>Client</h4>
+                                    <div class="mb-5">{{portfolioItem.client}}</div>
+                                </ng-container>
+                            </div>
+                            <div class="col-lg-6 order-2">
+                                <div class="left-content-wrapper">
+                                    <img [src]="portfolioItem.imageSrc" class="d-none d-lg-block mb-5 mx-auto image-portfolio"  [alt]="portfolioItem.name">
+                                    <ng-container *ngIf="!portfolioItem.explosiveDesign">
+                                        <h4>Tools Used</h4>
+                                        <ul class="list-unstyled d-flex flex-wrap">
+                                            <ng-container *ngFor='let tool of portfolioItem.toolsUsed'>
+                                                <li class="tool-item" [class]="tool.toolClass">
+                                                    <div class="icon"></div>
+                                                    <div class="tool-name"> 
+                                                        {{tool.toolName}}
+                                                    </div>
                                                 </li>
-                                            </ul> -->
-                                        </div>
-
-                                    </div>
+                                            </ng-container>
+                                        </ul>
+                                        <h4>Client</h4>
+                                        <div class="mb-5">{{portfolioItem.client}}</div>
+                                    </ng-container>
                                 </div>
                             </div>
                         </div>

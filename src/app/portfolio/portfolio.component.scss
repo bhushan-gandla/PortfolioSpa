@@ -73,3 +73,10 @@
         font-size: pxToRem(12);
     }
 }
+
+.header-spacer {
+    .btn {
+      position: relative;
+      z-index: 1;
+    }
+  }

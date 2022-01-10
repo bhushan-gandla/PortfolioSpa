@@ -40,75 +40,75 @@ export class AppComponent {
 
 
 
-  @HostListener('window:scroll', ['$event']) 
-  scrollHandler(event: any){
-    var windowHeight = window.innerHeight;
-    var scrollValue = window.scrollY;
-    var positionTracker = 0;
-    positionTracker = ((scrollValue * 100)/windowHeight);
-    document.documentElement.style.setProperty('--positionTracker', `${positionTracker}%`);
-    console.log(positionTracker);
-    var sectionTracker;
+  // @HostListener('window:scroll', ['$event']) 
+  // scrollHandler(event: any){
+  //   var windowHeight = window.innerHeight;
+  //   var scrollValue = window.scrollY;
+  //   var positionTracker = 0;
+  //   positionTracker = ((scrollValue * 100)/windowHeight);
+  //   document.documentElement.style.setProperty('--positionTracker', `${positionTracker}%`);
+  //   console.log(positionTracker);
+  //   var sectionTracker;
     
-    function updateSectionTracker(offsetValue:any){
-      sectionTracker = positionTracker - offsetValue;
-      // console.log(sectionTracker);
-      console.log("section tracker is" + sectionTracker);
+  //   function updateSectionTracker(offsetValue:any){
+  //     sectionTracker = positionTracker - offsetValue;
+  //     // console.log(sectionTracker);
+  //     console.log("section tracker is" + sectionTracker);
       
-      // var opacity1 = positionTracker;
-      // var opacity2 = 100-opacity1;
-      // document.documentElement.style.setProperty('--opacity-1', `${opacity1}%`);
-      // document.documentElement.style.setProperty('--opacity-2', `${opacity2}%`);
-    }  
-    function opacityAdjuster1(opacityOffset: any, opacityChanger: any){
-      var opacityAdjusterValue = opacityOffset-positionTracker;
-      document.documentElement.style.setProperty(`${opacityChanger}`, `${opacityAdjusterValue}%`);
-    }
-    function opacityAdjuster2(opacityOffset: any, opacityChanger: any){
-      var opacityAdjusterValue2 = positionTracker-opacityOffset;
-      document.documentElement.style.setProperty(`${opacityChanger}`, `${opacityAdjusterValue2}%`);
-    }
-    function borderRadiusAdjuster(borderRadiusOffeset: any){
-      var positionReverse = positionTracker-50;
-      var borderRadiusOffesetValue = borderRadiusOffeset-positionReverse;
-      // var patternPositionerValue = 8.2*positionReverse;
-      document.documentElement.style.setProperty('--fixed-bg-border-radius', `${borderRadiusOffesetValue}%`);
-    }
-    function widthHeightAdjuster(){
-      var positionReverse = positionTracker-50;
-      var patternPositionerValue = 8.2*positionReverse;
-      document.documentElement.style.setProperty('--pattern-left-position', `-${patternPositionerValue}px`);
-    }
-    if(positionTracker <= 100){
-      opacityAdjuster1(100, '--landing-opacity'); 
-      opacityAdjuster2(0, '--about-me-opacity');
-    }if(positionTracker >= 100 && positionTracker <= 200){
-      console.log("second section")
-      opacityAdjuster1(200, '--about-me-opacity'); 
-      opacityAdjuster1(200, '--pattern-opacity');
-      opacityAdjuster2(100, '--experience-opacity');
-      borderRadiusAdjuster(150);
-    }if(positionTracker >= 200 && positionTracker <= 300){
-      console.log("third section")
-      opacityAdjuster1(300, '--experience-opacity');
-      opacityAdjuster2(200, '--skills-opacity');
-      opacityAdjuster2(200, '--pattern-opacity');
-    }if(positionTracker >= 300 && positionTracker <= 400){
-      console.log("fourth section")
-      opacityAdjuster1(400, '--skills-opacity');
-      opacityAdjuster1(400, '--pattern-opacity');
-      opacityAdjuster2(300, '--portfolio-opacity');
-    }if(positionTracker >= 400 && positionTracker <= 500){
-      console.log("fifth section")
-      opacityAdjuster1(500, '--portfolio-opacity');
-      opacityAdjuster2(400, '--get-in-touch-opacity');
-    }if(positionTracker >= 500 && positionTracker <= 600){
-      console.log("sixth section")
-      opacityAdjuster1(600, '--get-in-touch-opacity');
-      opacityAdjuster2(500, '--opacity-7');
-    }
+  //     // var opacity1 = positionTracker;
+  //     // var opacity2 = 100-opacity1;
+  //     // document.documentElement.style.setProperty('--opacity-1', `${opacity1}%`);
+  //     // document.documentElement.style.setProperty('--opacity-2', `${opacity2}%`);
+  //   }  
+  //   function opacityAdjuster1(opacityOffset: any, opacityChanger: any){
+  //     var opacityAdjusterValue = opacityOffset-positionTracker;
+  //     document.documentElement.style.setProperty(`${opacityChanger}`, `${opacityAdjusterValue}%`);
+  //   }
+  //   function opacityAdjuster2(opacityOffset: any, opacityChanger: any){
+  //     var opacityAdjusterValue2 = positionTracker-opacityOffset;
+  //     document.documentElement.style.setProperty(`${opacityChanger}`, `${opacityAdjusterValue2}%`);
+  //   }
+  //   function borderRadiusAdjuster(borderRadiusOffeset: any){
+  //     var positionReverse = positionTracker-50;
+  //     var borderRadiusOffesetValue = borderRadiusOffeset-positionReverse;
+  //     // var patternPositionerValue = 8.2*positionReverse;
+  //     document.documentElement.style.setProperty('--fixed-bg-border-radius', `${borderRadiusOffesetValue}%`);
+  //   }
+  //   function widthHeightAdjuster(){
+  //     var positionReverse = positionTracker-50;
+  //     var patternPositionerValue = 8.2*positionReverse;
+  //     document.documentElement.style.setProperty('--pattern-left-position', `-${patternPositionerValue}px`);
+  //   }
+  //   if(positionTracker <= 100){
+  //     opacityAdjuster1(100, '--landing-opacity'); 
+  //     opacityAdjuster2(0, '--about-me-opacity');
+  //   }if(positionTracker >= 100 && positionTracker <= 200){
+  //     console.log("second section")
+  //     opacityAdjuster1(200, '--about-me-opacity'); 
+  //     opacityAdjuster1(200, '--pattern-opacity');
+  //     opacityAdjuster2(100, '--experience-opacity');
+  //     borderRadiusAdjuster(150);
+  //   }if(positionTracker >= 200 && positionTracker <= 300){
+  //     console.log("third section")
+  //     opacityAdjuster1(300, '--experience-opacity');
+  //     opacityAdjuster2(200, '--skills-opacity');
+  //     opacityAdjuster2(200, '--pattern-opacity');
+  //   }if(positionTracker >= 300 && positionTracker <= 400){
+  //     console.log("fourth section")
+  //     opacityAdjuster1(400, '--skills-opacity');
+  //     opacityAdjuster1(400, '--pattern-opacity');
+  //     opacityAdjuster2(300, '--portfolio-opacity');
+  //   }if(positionTracker >= 400 && positionTracker <= 500){
+  //     console.log("fifth section")
+  //     opacityAdjuster1(500, '--portfolio-opacity');
+  //     opacityAdjuster2(400, '--get-in-touch-opacity');
+  //   }if(positionTracker >= 500 && positionTracker <= 600){
+  //     console.log("sixth section")
+  //     opacityAdjuster1(600, '--get-in-touch-opacity');
+  //     opacityAdjuster2(500, '--opacity-7');
+  //   }
 
-  }
+  // }
 
 
 
