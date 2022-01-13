@@ -1,11 +1,11 @@
-// @import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/mixins";
-// @import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/variables";
 @import "../../global/variables";
 @import "../../global/functions";
 
 .portfolio-landing-section {
-  height: calc(100vh - 250px);
+  height: calc(100vh - 180px);
 }
 @include media-breakpoint-down(sm) {
   .fixed-scroll-bg {
@@ -14,6 +14,20 @@
     top: auto !important;
     left: auto !important;
     margin-left: 0px;
+  }
+}
+@include media-breakpoint-up(sm) {
+  .fixed-scroll-bg {
+    width: pxToRem(350);
+    height: pxToRem(350);
+    margin-left: 2%;
+  }
+}
+@include media-breakpoint-up(xxl) {
+  .fixed-scroll-bg {
+    width: pxToRem(400);
+    height: pxToRem(400);
+    margin-left: 2%;
   }
 }
 .layout-wrapper {
@@ -235,4 +249,7 @@
       top: -225px;
     }
   }
+}
+.tabs-wrapper{
+  z-index: 3;
 }
