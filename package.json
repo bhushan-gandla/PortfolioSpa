@@ -19,8 +19,6 @@
     "@angular/platform-browser-dynamic": "~12.1.0",
     "@angular/router": "~12.1.0",
     "@popperjs/core": "^2.9.2",
-    "angular-scroll-magic": "^0.2.4",
-    "angular-skrollr": "^0.2.1",
     "bootstrap": "^5.0.2",
     "jquery": "^3.6.0",
     "popper": "^1.0.1",

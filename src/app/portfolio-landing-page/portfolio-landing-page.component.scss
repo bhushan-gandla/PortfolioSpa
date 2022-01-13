@@ -1,6 +1,6 @@
-@import "~bootstrap/scss/functions";
+// @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/mixins";
-@import "~bootstrap/scss/variables";
+// @import "~bootstrap/scss/variables";
 @import "../../global/variables";
 @import "../../global/functions";
 
@@ -82,12 +82,7 @@
   }
 }
 .portfolio-items-outer-wrapper {
-  // border: 0.5px solid $grey;
-  // margin: -1px;
-  // overflow: hidden;
-
   display: inline-grid;
-  // grid-template-columns: 100% 100% 100%;
   grid-template-columns: repeat(auto-fill, 100%);
   border-top: 1px solid #fff;
   grid-gap: 1px;
@@ -110,12 +105,9 @@
   position: relative;
   overflow: hidden;
   &.washington-sq-hyperlapse{
-    // position: relative;
     width: 100%;
     padding: 0px;
     img{
-      // position: absolute;
-      // inset: 0px 0px 0px 0px;
       object-fit: cover;
       width: 100%;
       height: 100%;
@@ -145,10 +137,8 @@
     left: 0px;
     right: 0px;
     bottom: 0px;
-    // background-color: rgba(128, 128, 128, 0.247);;
   }
   &:hover {
-    // border: 1px solid $grey;
     transform: scale(105%);
     -webkit-box-shadow: 0 0 10px rgb(124 124 124 / 15%);
     box-shadow: 0 0 10px rgb(124 124 124 / 15%);
@@ -245,111 +235,4 @@
       top: -225px;
     }
   }
-}
-.tool-item{
-  background-color: $secondary;
-  height: pxToRem(24);
-  border-radius: pxToRem(12);
-  display: inline-flex;
-  align-items: center;
-  margin: 0px pxToRem(10) pxToRem(10) 0px;
-  .icon{
-    background-color: #92e3f7 !important;
-    height: pxToRem(24);
-    width: pxToRem(24);
-    border-radius: 50%;
-    background-size: pxToRem(19);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .tool-name{
-    padding: pxToRem(2) pxToRem(8) pxToRem(2) pxToRem(5);
-    font-size: pxToRem(13);
-  }
-  &.adobe-xd .icon{ 
-    background-image: url("../../assets/adobeXd.svg");
-    background-color: #470137;
-    background-size: pxToRem(14);
-  }
-  &.adobe-illustrator .icon{
-    background-image: url("../../assets/adobeIllustrator.svg");
-    background-color: #470137;
-    background-size: pxToRem(14);
-  }
-  &.adobe-photoshop .icon{
-    background-image: url("../../assets/adobePhotoshop.svg");
-    background-color: #470137;
-    background-size: pxToRem(14);
-  }
-  &.zeplin .icon{ 
-    background-image: url("../../assets/zeplin.svg");
-    background-color: #092325;
-  }
-  &.html .icon{ 
-    background-image: url("../../assets/html5.svg");
-    background-color: #092325;
-    background-size: pxToRem(15);
-  }
-  &.scss .icon{ 
-    background-image: url("../../assets/sass.svg");
-    background-color: #012325;
-    background-size: pxToRem(16);
-  }
-  &.bootstrap-4 .icon{ 
-    background-image: url("../../assets/bootstrap.svg");
-    background-color: #563d7c;
-    // background-size: pxToRem(13);
-  }
-  &.javascript .icon{ 
-    background-image: url("../../assets/javaScript.svg");
-    background-color: #f7df1e;
-    background-position: 0px -1px;
-  }
-  &.angular .icon{ 
-    background-image: url("../../assets/angular.svg");
-    background-color: #900625;
-  }
-  &.css .icon{ 
-    background-image: url("../../assets/css.svg");
-    background-color: #900625;
-    background-size: pxToRem(13);
-  }
-  &.no-icon {
-    padding-left: pxToRem(8);
-    .icon{ 
-      display: none;
-    }
-  }
-}
-.modal-top-wrapper{
-  padding-top: pxToRem(24);
-  margin-bottom: pxToRem(18);
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  background-color: $primary;
-  @include media-breakpoint-up(lg) {
-    padding-top: pxToRem(66);
-    margin-bottom: pxToRem(63);
-  }
-}
-.left-content-wrapper{
-  position: -webkit-sticky;
-  position: sticky;
-  top: 150px;
-}
-h4{
-  font-size: pxToRem(18);
-}
-.btn-close-elevator{
-  position: relative;
-  z-index: 1;
-}
-.btn-back{
-  padding: 0px;
-  height: 45px;
-  width: 45px;
-  margin-right: 18px;
-  background-color: $secondary;
-  border-radius: 50%;
 }
