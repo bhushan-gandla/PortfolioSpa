@@ -17,7 +17,7 @@
                             <p>
                                 I have worked on a wide variety of products. These include B2B/B2C facing applications, hybrid apps, responsive-accessible apps and CMS driven apps.
                             </p>
-                            <a class="btn btn-outline-dark rounded-pill" (click)="showMore()">Show more works</a>
+                            <a class="btn btn-outline-dark rounded-pill" (click)="showMore()">Show more work</a>
                         </div>
                     </div>
                     <div class="col-sm-6">
@@ -32,7 +32,7 @@
 <div class="modal fade portfolio-modal" id="portfolioDrawer" tabindex="-1" aria-labelledby="portfolioDrawerLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
-            <h5 class="modal-title visually-hidden" id="portfolioDrawerLabel">Modal title</h5>
+            <h5 class="modal-title visually-hidden" id="portfolioDrawerLabel">Password restricted content</h5>
             <div class="modal-body p-0">
                 <div class="vh-100 layout-wrapper">
                     <div class="bg-primary h-100">
@@ -67,7 +67,7 @@
                         <div class="align-items-center d-flex justify-content-center main-content">
                             <div class="flex-grow-1 row">
                                 <div class="col-8 offset-2 col-lg-4 offset-lg-4">
-                                    <p class="mb-5 pb-4 text-center">You would need password to proceed into this section.</p>
+                                    <p class="mb-5 pb-4 text-center">This content is password protected. Enter password to proceed.</p>
                                     <form class="needs-validation" novalidate>
                                         <div class="form-group mb-5">
                                             <div class="form-password-wrapper position-relative">
@@ -80,9 +80,8 @@
                                           </div>
                                           <div class="d-flex align-items-center">
                                               <a href="mailto:bhushan.gandla@outlook.com" class="btn btn-outline-dark border-0 p-0 bg-transparent text-dark">Request Access</a>
-                                              <button class="btn btn-outline-dark rounded-pill ms-auto" type="button" (click)="onSubmit()">Submit</button>
+                                              <button class="btn btn-outline-dark rounded-pill ms-auto" type="submit" (click)="onSubmit()">Submit</button>
                                           </div>
-                                        <!-- <a class="btn btn-outline-dark rounded-pill" [routerLink]="'portfolio-landing-page'" target="_blank">navigate</a> -->
                                     </form>
                                 </div>
                             </div>

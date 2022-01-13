@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,4 +37,7 @@ import { LocationStrategy, PathLocationStrategy } from '@angular/common';
   providers: [{provide: LocationStrategy, useClass: PathLocationStrategy}],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule { 
+
+  
+}
